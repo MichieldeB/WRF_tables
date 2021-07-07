@@ -3,12 +3,12 @@ WRF V4.0.2 tables of VEGPARM and LANDUSE with additions to use CLC with 44 class
 
 # How to use:
 
-##In WRF run directory:
+## In WRF run directory:
 
 Copy tables and replace your current LANDUSE.TBL and VEGPARM.TBL with the two here provided.
 (Or extend your tables with the additions at the bottom of the here provided tables)
 
-## Other locations
+## Other WRF code changes
 
 For most parameterizations no additional code changes are needed in WRF
 I think that NOAH-ruc has additional work with the different types and also includes lakes. 
