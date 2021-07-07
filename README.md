@@ -18,13 +18,23 @@ This is not yet included!
 
 ## Preparation of the LAND USE files
 
-The land use files in your geographic data directory all need an additional line in their index, setting the mminlu to "CLC"
+1) Convert the vector file to a raster with resolution similar to that needed for the domain. 
 
-mminlu="CLC"
+*In the near future I will reference to a paper of mine that treats the vector to raster process. (Submission planned soon)*
 
-furthermore, make sure that the 'category_min' and 'category_max' are set to correct values (such as 1 and 44)
+3) Convert the raser file to a binary file, such that it is readable by WRF
 
-These lines are generally near the end of the index, but should not matter much. 
+*A program that can do this is: convert_geotiff-master*
+
+4) Check the index file, to see if it is correctly created
+
+*Make sure that the 'category_min' and 'category_max' are set to correct values (such as 1 and 44)*
+
+5) Add a line to 
+
+*The land use files in your geographic data directory all need an additional line in their index, setting the mminlu to "CLC"*
+
+**mminlu="CLC"**
 
 
 
