@@ -10,11 +10,14 @@ Copy tables and replace your current LANDUSE.TBL and VEGPARM.TBL with the two he
 
 ## Other WRF code changes
 
-For most parameterizations no additional code changes are needed in WRF
+For most parameterizations no additional code changes are needed in WRF.
 I think that NOAH-ruc has additional work with the different types and also includes lakes. 
 This would need additional code to match the CLC classes to the correct surface handling.
 
+The newer land use datasets also include categories for lakes and have WRF code to handle them accordingly.
 This is not yet included!
+
+Required code might be put online when I find the time to work on it.
 
 ## Preparation of the LAND USE files
 
@@ -29,6 +32,7 @@ This is not yet included!
 4) Check the index file, to see if it is correctly created
 
 *Make sure that the 'category_min' and 'category_max' are set to correct values (such as 1 and 44)*
+*Check the missing value parameter for correctness*
 
 5) Add a line to 
 
