@@ -36,9 +36,13 @@ Required code might be put online when I find the time to work on it.
 
 5) Add a line to 
 
-*The land use files in your geographic data directory all need an additional line in their index, setting the mminlu to "CLC"*
+*The land use files in your geographic data directory all need a few additional line in their index, setting the mminlu to "CLC"*
 
 **mminlu="CLC"**
+**iswater = 44**
+**islake = 41**
+**isice = 34**
+(**isurban = 1**)
 
 ## Preparation of geogrid/GEOGRID.TBL (in WPS)
 
