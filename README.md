@@ -44,18 +44,18 @@ Required code might be put online when I find the time to work on it.
 
 1) set rel_path, give it a local abriviation from the GEO_DATA file
 
-for example a CLC12_3arcmin could be named CLC_3m
+for example a dataset called CLC12_44classes_3arcmin could be named CLC44_03m
 
-**rel_path=     CLC12_3arcmin:CLC_03m/**
+**rel_path=     CLC12_44classes_3arcmin:CLC44_03m/**
 
 2) set the landmask_water
 
 Full CLC has water at 40,41,42,43,44. It is possible to add the missing data values as well (often 0 and/or 45) 
 
-**landmask_water = CLC_03m:40,41,42,43,44**
+**landmask_water = CLC44_03m:40,41,42,43,44**
 
 3) Set interpretation option\
 
 Only the nearest_neighbor is a sensible option available within WRF, but feel free to try others
 
-**interp_option =     CLC_03m:nearest_neighbor**
+**interp_option =     CLC44_03m:nearest_neighbor**
