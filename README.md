@@ -1,11 +1,11 @@
 # WRF_tables
-WRF V4.0.2 tables of VEGPARM and LANDUSE with additions to use CLC with 44 classes
+WRF V4.0.2 tables of VEGPARM, MPTABLE.TBL and LANDUSE with additions to use CLC with 44 classes
 
 # How to use:
 
 ## In WRF run directory:
 
-Copy tables and replace your current LANDUSE.TBL and VEGPARM.TBL with the two here provided.
+Copy tables and replace your current MPTABLE.TBL, LANDUSE.TBL and VEGPARM.TBL with the two here provided.
 (Or extend your tables with the additions at the bottom of the here provided tables)
 
 ## Other WRF code changes
