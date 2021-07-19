@@ -43,10 +43,16 @@ Required code might be put online when I find the time to work on it.
 *The land use files in your geographic data directory all need a few additional line in their index, setting the mminlu to "CLC"*
 
 **mminlu="CLC"**
+
 **iswater = 44**
+
 **islake = 41**
+
 **isice = 34**
+
 (**isurban = 1**)
+
+Note: that if you add the islake line the values will initialize wrong. (This has something todo with the real requirement of the lake category to be outside of the regular range of the VEGPARM and LANDUSE tables, thus it has selected the USGS values to initialize, but after one calculation step this problem is corrected)
 
 ## Preparation of geogrid/GEOGRID.TBL (in WPS)
 
