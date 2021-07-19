@@ -7,6 +7,7 @@ WRF V4.0.2 tables of VEGPARM, MPTABLE.TBL and LANDUSE with additions to use CLC 
 
 Copy tables and replace your current MPTABLE.TBL, LANDUSE.TBL and VEGPARM.TBL with the two here provided.
 (Or extend your tables with the additions at the bottom of the here provided tables)
+MPTABLE.TBL is not yet tested and would only be required for the NOAHMP option (option 4). 
 
 ## Other WRF code changes
 
@@ -15,7 +16,8 @@ I think that NOAH-ruc has additional work with the different types and also incl
 This would need additional code to match the CLC classes to the correct surface handling.
 
 The newer land use datasets also include categories for lakes and have WRF code to handle them accordingly.
-This is not yet included!
+This is done in a second check of all land cover types during the real.exe step, turning the lake classes into the water class. 
+It can only handle one class of lake and water at a time. (the river coarses and other water classes will not be included in the landmask. 
 
 Required code might be put online when I find the time to work on it.
 
@@ -25,16 +27,18 @@ Required code might be put online when I find the time to work on it.
 
 *In the near future I will reference to a paper of mine that treats the vector to raster process. (Submission planned soon)*
 
-3) Convert the raser file to a binary file, such that it is readable by WRF
+2) Convert the raser file to a binary file, such that it is readable by WRF
 
 *A program that can do this is: convert_geotiff-master*
 
-4) Check the index file, to see if it is correctly created
+
+3) Check the index file, to see if it is correctly created
 
 *Make sure that the 'category_min' and 'category_max' are set to correct values (such as 1 and 44)*
 *Check the missing value parameter for correctness*
+*Check if the index file is created correctly, see  an example file in the repository*
 
-5) Add a line to 
+4) Add a line to 
 
 *The land use files in your geographic data directory all need a few additional line in their index, setting the mminlu to "CLC"*
 
