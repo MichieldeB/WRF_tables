@@ -19,6 +19,9 @@ The newer land use datasets also include categories for lakes and have WRF code 
 This is done in a second check of all land cover types during the real.exe step, turning the lake classes into the water class. 
 It can only handle one class of lake and water at a time. (the river coarses and other water classes will not be included in the landmask. 
 
+Thus to include all 5 water classes the WRF model needs to accept lists for islake or iswater. Or we precombine the classes into the lake and water class.
+I have combined water flows and lakes into lakes, the estuaries, I have combined the other water classes (coastal lagoons and sea and ocean) into the sea and ocean class. Since these classes were all still the same, this should not give a difference in the end result. 
+
 Required code might be put online when I find the time to work on it.
 
 ## Preparation of the LAND USE files
